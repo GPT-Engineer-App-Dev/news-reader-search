@@ -9,7 +9,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
-import { CircleUser, Menu, Package2 } from "lucide-react";
+import { CircleUser, Menu, Newspaper } from "lucide-react"; // Changed icon to Newspaper
 import { NavLink, Outlet } from "react-router-dom";
 import { navItems } from "../App";
 
@@ -36,8 +36,8 @@ const Sidebar = () => (
     <div className="flex h-full max-h-screen flex-col gap-2">
       <div className="flex h-14 items-center border-b px-4 lg:h-[60px] lg:px-6">
         <NavLink to="/" className="flex items-center gap-2 font-semibold">
-          <Package2 className="h-6 w-6" />
-          <span>Acme Inc</span>
+          <Newspaper className="h-6 w-6" /> {/* Changed icon to Newspaper */}
+          <span>Hacker News Top Stories</span> {/* Changed app name */}
         </NavLink>
       </div>
       <div className="flex-1">
@@ -68,8 +68,8 @@ const MobileSidebar = () => (
           to="/"
           className="flex items-center gap-2 text-lg font-semibold mb-4"
         >
-          <Package2 className="h-6 w-6" />
-          <span className="sr-only">Acme Inc</span>
+          <Newspaper className="h-6 w-6" /> {/* Changed icon to Newspaper */}
+          <span className="sr-only">Hacker News Top Stories</span> {/* Changed app name */}
         </NavLink>
         {navItems.map((item) => (
           <SidebarNavLink key={item.to} to={item.to}>
